@@ -276,3 +276,4 @@ tour_agency/media/
 .env
 .envs/*
 !.envs/.local/
+manage1.py

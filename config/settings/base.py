@@ -4,6 +4,7 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
+import dj_database_url
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # tour_agency/
