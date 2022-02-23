@@ -17,10 +17,10 @@ class TourShotsInline(admin.TabularInline):
 
 
 @admin.register(Tour)
-class Tur(admin.ModelAdmin):
+class TourAdmin(admin.ModelAdmin):
     inlines = [TourShotsInline]
 
 
 @admin.register(TourShots)
-class Tur(admin.ModelAdmin):
+class TourShotsAdmin(admin.ModelAdmin):
     pass
