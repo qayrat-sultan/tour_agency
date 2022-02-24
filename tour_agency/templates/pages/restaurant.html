@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% load static %}
-{% block title %}Restaurants{% endblock %}
-{% block hero_page %}restaurant{% endblock %}
-{% block hero_title %}Restaurant{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "Restaurants" %}{% endblock %}
+{% block hero_page %}{% trans "restaurant" %}{% endblock %}
+{% block hero_title %}{% trans "Restaurant" %}{% endblock %}
 
 
 {% block content %}
@@ -10,8 +10,8 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section text-center ftco-animate">
-        <span class="subheading">Restaurant</span>
-        <h2>Restaurant</h2>
+        <span class="subheading">{% trans "Restaurant" %}</span>
+        <h2>{% trans "Restaurant" %}</h2>
       </div>
     </div>
     <div class="row">

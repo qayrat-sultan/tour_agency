@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% load static %}
-{% block title %}Contacts{% endblock %}
-{% block hero_page %}about{% endblock %}
-{% block hero_title %}About us{% endblock %}
+{% load static i18n %}
+{% block title %}{% blocktrans %}About us{% endblocktrans %}{% endblock %}
+{% block hero_page %}{% trans "about" %}{% endblock %}
+{% block hero_title %}{% blocktrans %}About us{% endblocktrans %}{% endblock %}
 
 {% block content %}
 		<section class="ftco-section ftc-no-pb ftc-no-pt">

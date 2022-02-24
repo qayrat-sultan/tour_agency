@@ -1,15 +1,15 @@
 {% extends "base.html" %}
-{% load static %}
-{% block title %}Contacts{% endblock %}
-{% block hero_page %}contact{% endblock %}
-{% block hero_title %}Contact us{% endblock %}
+{% load static i18n %}
+{% block title %}{% trans "Contacts" %}{% endblock %}
+{% block hero_page %}{% trans "contact" %}{% endblock %}
+{% block hero_title %}{% blocktrans %}Contact us{% endblocktrans %}{% endblock %}
 
 {% block content %}
 <section class="ftco-section contact-section bg-light">
     <div class="container">
       <div class="row d-flex mb-5 contact-info">
         <div class="col-md-12 mb-4">
-          <h2 class="h3">Contact Information</h2>
+          <h2 class="h3">{% blocktrans %}Contact Information{% endblocktrans %}</h2>
         </div>
         <div class="w-100"></div>
         <div class="col-md-3 d-flex">
