@@ -42,13 +42,25 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
+# DATABASES = {
+#     "default": env.db(
+#         "DATABASE_URL",
+#         default="postgresql://postgres:1234@postgres:5432/lusiadas",
+#     ),
+# }
 DATABASES = {
-    "default": env.db(
-        "DATABASE_URL",
-        default="postgres:///tour_agency",
-    ),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'lusiadas',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': 5432,
+    }
 }
+
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
+print(DATABASES)
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
