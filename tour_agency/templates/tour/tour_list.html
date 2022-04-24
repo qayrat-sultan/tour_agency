@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %} {% trans 'Tour list' %} {% endblock %}
+{% block hero_page %}{% trans 'Tour list' %}{% endblock %}
+{% block hero_title %} {% trans 'Tour list' %} {% endblock %}
+
+{% block content %}
+ {% for tour in object_list %}
+    {{ tour.title }}<br>
+    {{ tour.description }}<br>
+<img src="{{ tour.image.url }}" alt=""><br>
+ {% endfor %}
+{% endblock %}

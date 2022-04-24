@@ -18,6 +18,7 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("tour_agency.users.urls", namespace="users")),
+    path("tours/", include("tour_agency.tour.urls", namespace="tours")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

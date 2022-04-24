@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
-from tour_agency.home.models import Tour, TourShots
+from tour_agency.tour.models import Tour, TourShots
 
 
 class TourShotsInline(admin.TabularInline):
