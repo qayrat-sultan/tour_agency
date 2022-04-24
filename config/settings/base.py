@@ -4,12 +4,14 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
+import os
 import dj_database_url
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # tour_agency/
 APPS_DIR = ROOT_DIR / "tour_agency"
 env = environ.Env()
+environ.Env.read_env(os.path.join(ROOT_DIR, '.env')) #<-- where ever your .env lies inside project directory
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
 if READ_DOT_ENV_FILE:
