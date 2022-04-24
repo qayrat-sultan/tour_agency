@@ -21,7 +21,8 @@ urlpatterns = [
     path("tours/", include("tour_agency.tour.urls", namespace="tours")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + [static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) +
+     static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)]
 
 
 if settings.DEBUG:
