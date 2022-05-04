@@ -147,3 +147,4 @@ LOGGING = {
 # ------------------------------------------------------------------------------
 
 CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
+STATIC_ROOT = "/var/www/html/static"
