@@ -1,7 +1,17 @@
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django.contrib import admin
+from django import forms
 from django.utils.safestring import mark_safe
 
 from tour_agency.tour.models import Tour, TourShots
+
+
+class TourAdminForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget())
+
+    class Meta:
+        model = Tour
+        fields = '__all__'
 
 
 class TourShotsInline(admin.TabularInline):
@@ -19,6 +29,7 @@ class TourShotsInline(admin.TabularInline):
 @admin.register(Tour)
 class TourAdmin(admin.ModelAdmin):
     inlines = [TourShotsInline]
+    form = TourAdminForm
 
 
 @admin.register(TourShots)

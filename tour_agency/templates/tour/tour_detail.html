@@ -5,7 +5,7 @@
 {% block hero_title %} {{ object.title }} {% endblock %}
 {% block content %}
   {{ object.title }}<br>
-  {{ object.description }}<br>
+  {{ object.description|safe }}<br>
   {{ object.image.url }}<br>
   <section class="ftco-section">
         <div class="container">

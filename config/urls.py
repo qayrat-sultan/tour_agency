@@ -21,6 +21,7 @@ urlpatterns = [
     path("tours/", include("tour_agency.tour.urls", namespace="tours")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
