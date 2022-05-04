@@ -278,3 +278,4 @@ tour_agency/media/
 !.envs/.local/
 manage1.py
 static
+CACHE
