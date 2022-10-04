@@ -23,7 +23,7 @@ Deprecated==1.2.13
 dill==0.3.4
 distlib==0.3.4
 dj-database-url==0.5.0
-Django==3.2.12
+Django==4.1.2
 django-allauth==0.48.0
 django-anymail==8.5
 django-appconf==1.0.5
